@@ -11,8 +11,8 @@ describe RemoteDatabaseCleaner::Config do
     describe 'default configuration' do
       it 'should be configured with correct defaults' do
         default_config = RemoteDatabaseCleaner::Config.new
-        expect(default_config.home).to eq({ :host      => nil, 
-                                            :port      => nil, 
+        expect(default_config.home).to eq({ :host      => nil,
+                                            :port      => nil,
                                             :end_point => '/remote_database_cleaners'})
       end
     end
@@ -20,8 +20,8 @@ describe RemoteDatabaseCleaner::Config do
     describe '.configure' do
       it 'should be able to set configurations' do
         config  = RemoteDatabaseCleaner::Config.configure({ :home => { :host => 'tifton', :port => 9999, :end_point => '/somewhere' }})
-        expect(config.home).to eq({ :host      => 'tifton', 
-                                    :port      => 9999, 
+        expect(config.home).to eq({ :host      => 'tifton',
+                                    :port      => 9999,
                                     :end_point => '/somewhere'})
       end
     end
@@ -35,7 +35,7 @@ describe RemoteDatabaseCleaner::Config do
 
       it 'should return a url without a port if port is not configured' do
         default_config.home[:host] = 'localhost_no_port'
-        default_config.home[:port] = nil 
+        default_config.home[:port] = nil
         expect(default_config.home_url).to eq('http://localhost_no_port/remote_database_cleaners')
       end
     end

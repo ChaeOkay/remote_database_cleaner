@@ -5,8 +5,8 @@ module RemoteDatabaseCleaner
   class Config
     include Virtus.model
 
-    DEFAULT_HOME_CONFIG = { :host      => nil, 
-                            :port      => nil, 
+    DEFAULT_HOME_CONFIG = { :host      => nil,
+                            :port      => nil,
                             :end_point => '/remote_database_cleaner/home/clean' }
 
     attribute :home, Hash, :default => DEFAULT_HOME_CONFIG

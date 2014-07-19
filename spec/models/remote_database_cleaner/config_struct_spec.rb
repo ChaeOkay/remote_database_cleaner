@@ -11,8 +11,8 @@ describe RemoteDatabaseCleaner::ConfigStruct do
       end
 
       thing = Thing.configure do |config|
-        config.first_name = 'Sam' 
-        config.last_name  = 'Iam' 
+        config.first_name = 'Sam'
+        config.last_name  = 'Iam'
       end
 
       expect(thing.to_hash).to eq({:first_name => 'Sam', :last_name => 'Iam'})

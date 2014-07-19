@@ -11,7 +11,7 @@ module RemoteDatabaseCleaner
         {}
       end
     end
-   
+
     def to_hash
       @table
     end
